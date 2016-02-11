@@ -1,5 +1,5 @@
 {
-  "name": "HugoZonderland/earny-php-client",
+  "name": "hmazonderland/earny-php-client",
   "description": "Simple Earny API client",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -14,5 +14,6 @@
   "version": "1.0",
   "require": {
     "ext-curl": "*"
-  }
+  },
+  "type": "library"
 }
