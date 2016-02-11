@@ -1,0 +1,18 @@
+{
+  "name": "HugoZonderland/earny-php-client",
+  "description": "Simple Earny API client",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Hugo Zonderland",
+      "email": "hugo@webiq.nl"
+    }
+  ],
+  "homepage": "http://www.earny.nl",
+  "keywords": ["earny", "earny client", "earny api"],
+  "version": "1.0",
+  "require": {
+    "ext-curl": "*"
+  }
+}
