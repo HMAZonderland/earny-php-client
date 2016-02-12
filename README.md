@@ -4,6 +4,8 @@ Simple wrapper for the [Earny](http://www.earny.nl)!
 
 Examples. For more information about the Earny API, visit their [documentation](https://www.earny.nl/apidocs) page.
 
+I am in no way afflicted with Earny. Use this source at your own risk. Please report any bugs or improvements.
+
 #####Add Draft
 ```php
 $earny_data = [
