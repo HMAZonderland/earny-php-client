@@ -7,7 +7,7 @@ namespace Earny;
  *
  * @package Earny
  */
-class Earny
+class Earny implements EarnyInterface
 {
     /**
      * @var string $username - Login e-mail address
