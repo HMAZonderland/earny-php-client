@@ -24,7 +24,7 @@ interface EarnyInterface
      *
      * @return array
      */
-    public function getContacts($filters = array());
+    public function getContacts($filters = []);
 
     /**
      * Returns all Contacts from Earny
@@ -32,7 +32,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getAllContacts($filters = array());
+    public function getAllContacts($filters = []);
 
     /**
      * Gets a specific Contact
@@ -73,7 +73,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getProducts($filters = array());
+    public function getProducts($filters = []);
 
     /**
      * Returns a single Product
@@ -114,7 +114,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getCategories($filters = array());
+    public function getCategories($filters = []);
 
     /**
      * Returns a single Product
@@ -147,7 +147,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getPaymentMethods($filters = array());
+    public function getPaymentMethods($filters = []);
 
     /**
      * Returns a single Payment Method
@@ -180,7 +180,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getVatGroups($filters = array());
+    public function getVatGroups($filters = []);
 
     /**
      * Returns a single VatGroup
@@ -196,7 +196,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getDrafts($filters = array());
+    public function getDrafts($filters = []);
 
     /**
      * Gets a single Draft
@@ -272,7 +272,7 @@ interface EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getInvoices($filters = array());
+    public function getInvoices($filters = []);
 
     /**
      * Returns a single Invoice

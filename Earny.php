@@ -63,7 +63,7 @@ class Earny implements EarnyInterface
      *
      * @return array
      */
-    public function getContacts($filters = array())
+    public function getContacts($filters = [])
     {
         $result = $this->_sendRequest('/contacts', null, null, $filters);
         return $result;
@@ -75,10 +75,10 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getAllContacts($filters = array())
+    public function getAllContacts($filters = [])
     {
         $allcontacts = false;
-        $contacts = array();
+        $contacts = [];
         $i = 0;
 
         while ($allcontacts == false) {
@@ -169,7 +169,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getProducts($filters = array())
+    public function getProducts($filters = [])
     {
         $result = $this->_sendRequest('/products', null, null, $filters);
         return $result;
@@ -231,7 +231,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getCategories($filters = array())
+    public function getCategories($filters = [])
     {
         $result = $this->_sendRequest('/categories', null, null, $filters);
         return $result;
@@ -281,7 +281,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getPaymentMethods($filters = array())
+    public function getPaymentMethods($filters = [])
     {
         $result = $this->_sendRequest('/paymentmethods', null, null, $filters);
         return $result;
@@ -331,7 +331,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getVatGroups($filters = array())
+    public function getVatGroups($filters = [])
     {
         $result = $this->_sendRequest('/vatgroups', null, null, $filters);
         return $result;
@@ -356,7 +356,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getDrafts($filters = array())
+    public function getDrafts($filters = [])
     {
         $result = $this->_sendRequest('/drafts', null, null, $filters);
         return $result;
@@ -479,7 +479,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    public function getInvoices($filters = array())
+    public function getInvoices($filters = [])
     {
         $result = $this->_sendRequest('/invoices', null, null, $filters);
         return $result;
@@ -540,7 +540,7 @@ class Earny implements EarnyInterface
      * @param array $filters
      * @return array
      */
-    protected function _sendRequest($endpoint, $params = array(), $method = 'GET', $filters = array())
+    protected function _sendRequest($endpoint, $params = [], $method = 'GET', $filters = [])
     {
         $ch = curl_init();
 
@@ -595,7 +595,7 @@ class Earny implements EarnyInterface
         curl_close($ch);
         $apiresult_json = json_decode($apiresult, true);
 
-        $result = array();
+        $result = [];
 
         if (!in_array($headerinfo['http_code'], array('200', '201', '204'))) {
             $result['success'] = false;
