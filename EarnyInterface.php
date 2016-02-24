@@ -43,6 +43,14 @@ interface EarnyInterface
     public function getContact($idcontact);
 
     /**
+     * Adds a new Contact
+     *
+     * @param $params
+     * @return array
+     */
+    public function addContact($params);
+
+    /**
      * Edits an existing Contact
      *
      * @param $idcontact
