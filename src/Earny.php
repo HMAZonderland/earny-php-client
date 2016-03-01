@@ -65,6 +65,7 @@ class Earny implements EarnyInterface
     {
         $this->username = $username;
         $this->password = $password;
+        $this->certificatePath = $certificatePath;
     }
 
     /**
