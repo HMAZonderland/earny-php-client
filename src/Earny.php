@@ -20,6 +20,16 @@ class Earny implements EarnyInterface
     protected $password;
 
     /**
+     * @var string $certificatePath - Path to certificate
+     *
+     * You will need this certificate if your server doesn't have an SSL Certificate.
+     * You can get the certificate here: https://curl.haxx.se/docs/caextract.html
+     *
+     * Please save this file to a location on the server and set the full path to the certificate file in here.
+     */
+    protected $certificatePath;
+
+    /**
      * @var string $apihost - API hostname
      */
     protected $apihost = 'secure.earny.nl';
@@ -49,8 +59,9 @@ class Earny implements EarnyInterface
      *
      * @param string $username
      * @param string $password
+     * @param string $certificatePath
      */
-    public function __construct($username, $password)
+    public function __construct($username, $password, $certificatePath = '')
     {
         $this->username = $username;
         $this->password = $password;
@@ -559,6 +570,10 @@ class Earny implements EarnyInterface
 
         if ($this->debug) {
             echo 'URL: ' . $this->_getUrl($endpoint) . "\n";
+        }
+
+        if (!is_null($this->certificatePath)){
+            curl_setopt($ch, CURLOPT_CAINFO, $this->certificatePath);
         }
 
         curl_setopt($ch, CURLOPT_URL, $this->_getUrl($endpoint));

@@ -14,8 +14,9 @@ interface EarnyInterface
      *
      * @param string $username
      * @param string $password
+     * @param $certificatePath
      */
-    public function __construct($username, $password);
+    public function __construct($username, $password, $certificatePath = '');
 
     /**
      * Returns contacts matching the given $filter
