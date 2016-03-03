@@ -97,6 +97,13 @@ class Earny implements EarnyInterface
             $filters['start'] = ($i * 100);
             $result = $this->getContacts($filters);
 
+            /**
+             * If the server has no SSL Certificate or there is no Certificate assigned it will throw an Exception.
+             */
+            if (!isset($result['data'])) {
+                throw new \Exception('There is no response data found.');
+            }
+
             if (count($result['data']) < 100) {
                 $allcontacts = true;
             }
