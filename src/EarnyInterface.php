@@ -308,4 +308,11 @@ interface EarnyInterface
      * @return array
      */
     public function addPaymentToInvoice($idinvoice, $params);
+
+    /**
+     * Return $debug
+     *
+     * @return bool
+     */
+    public function isDebugMode();
 }
