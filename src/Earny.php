@@ -549,6 +549,16 @@ class Earny implements EarnyInterface
     {
         $this->debug = true;
     }
+    
+    /**
+     * Return $debug
+     * 
+     * @return bool
+     */
+    public function isDebugMode()
+    {
+        return $this->debug;
+    }
 
     /**
      * Sends out the request
