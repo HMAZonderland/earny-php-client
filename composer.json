@@ -1,5 +1,5 @@
 {
-  "name": "hmazonderland/earny-php-client",
+  "name": "webiq/earny-php-client",
   "description": "Simple Earny API client",
   "minimum-stability": "stable",
   "license": "proprietary",
